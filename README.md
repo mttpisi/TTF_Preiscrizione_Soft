@@ -12,7 +12,7 @@ Repo per il progetto di preiscrizione soft del TTF
     - express
 - Database MongoDB
 
-**Per il professor rubulotta :**
+### **Per il professor rubulotta :**
 Ci sono alcuni punti su cui ho dei dubbi:
 1. Era rischiesto l'utilizzo di una form, anche se avrei preferito utilizzare jQuery. 
 E' corretta l'impostazione del codice per inviare una richiesta POST al server?
