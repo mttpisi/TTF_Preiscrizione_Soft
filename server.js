@@ -5,7 +5,11 @@ const uuidv1 = require('uuid/v1');
 var mongoClient = require('mongodb').MongoClient;
 var express = require('express');
 
-const port = 3000;
+//richiamando le variabili d'ambiente nel file .env
+var dotenv = require('dotenv');
+dotenv.config();
+console.log(process.env.PORT);
+
 var app = express();
 
 
@@ -42,7 +46,7 @@ app.post('/preregister',function(req,res){
         userData.token = uuidv1();
         /* console.log(userData); */
         //il server prova a connettersi al server mongodb(locale)
-        mongoClient.connect("mongodb://localhost:27017/backofficeDB",function(err,client){
+        mongoClient.connect("mongodb://" + process.env.MONGODB_URL + ":" + MONGODB_PORT + "/backofficeDB",function(err,client){
             //se non ci sono errori procede, se no risponde con un errore
             if(!err){
                 //ricava il database
@@ -70,6 +74,6 @@ app.post('/preregister',function(req,res){
 });
 
 //Dichiara il server in ascolto sulla porta(definita in precedenza)
-app.listen(port, function () {
-  console.log('Server in ascolto su ' + port);
+app.listen(process.env.PORT, function () {
+  console.log('Server in ascolto su ' + process.env.PORT);
 });
