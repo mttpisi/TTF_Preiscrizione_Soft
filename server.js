@@ -8,7 +8,7 @@ var express = require('express');
 //richiamando le variabili d'ambiente nel file .env
 var dotenv = require('dotenv');
 dotenv.config();
-console.log(process.env.PORT);
+console.log(process.env);
 
 var app = express();
 
