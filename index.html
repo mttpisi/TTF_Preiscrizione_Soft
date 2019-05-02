@@ -43,8 +43,21 @@
                             <input type="email" class="form-control" id="inputEmail" name="email" required>
                         </div>
                         <div class="col-md-4 form-group col-xs-5">
-                            <label for="inputTelefono">Telefono</label>
-                            <input type="text" class="form-control" id="inputTelefono" name="telefono" required>
+                            
+                            <label for="contTel">Telefono</label>
+                            <div class="form-inline" id = "contTel">
+                                <div class="col-md-3 col-xs-3 p-0">
+                                    <select name="" class = "form-control" id="prefissoTel">
+                                        <option value="02">02</option>
+                                        <option value="39">+39</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-9 col-xs-9 p-0 pl-2">
+                                        <input type="text" style="width:100%" class="form-control" id="inputTelefono" name="telefono" required>
+                                </div>
+                                
+                            </div>
+                            
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -72,5 +85,6 @@
         </div>
 
         <script src="js/script.js"></script>
+        <script src="js/checkTelefono.js"></script>
     </body>
 </html>
